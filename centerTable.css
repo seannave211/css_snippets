@@ -1,0 +1,13 @@
+/*
+Title: Wikibox
+Version: v1.0.1
+Purpose: A CSS snippet for centering the table within a document when 'centerTable' is set as a cssclass.
+Author: Sean Nave
+Acknowledgement: deathau
+*/
+
+.markdown-preview-view.centerTable table {
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
