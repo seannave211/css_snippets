@@ -1,0 +1,23 @@
+/*
+ * Version: v0.0.1
+ * Purpose: Create a callout box that floats to the edges of the pane.
+ * Author: FireIsGood 
+ */
+
+:root {
+    --tooltip-size: 250px;
+}
+
+.markdown-preview-view {
+    container-name: page;
+    container-type: inline-size;
+}
+
+@container page (width > 1200px) {
+    .markdown-reading-view .callout[data-callout="epic"] {
+        --p-spacing: 0;
+        position: absolute;
+        width: var(--tooltip-size);
+        translate: calc(-1 * (var(--tooltip-size) + 1rem)) 0;
+    }
+}
