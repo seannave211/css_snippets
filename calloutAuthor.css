@@ -1,3 +1,9 @@
+/*
+ * Purpose: Create a callout box that floats to the edges of the pane.
+ * Author: seannave211
+ * Acknowledgement: rushi
+ */
+
 .callout[data-callout="author"] {
     --callout-color: 255, 255, 255;
     --callout-icon: lucide-user;
