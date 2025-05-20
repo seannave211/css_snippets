@@ -1,7 +1,8 @@
 /*
- * Version: v0.0.1
+ * Version: v1.0.0
  * Purpose: Create a callout box that floats to the edges of the pane.
- * Author: FireIsGood 
+ * Author: seannave211
+ * Acknowledgement: FireIsGood
  */
 
 :root {
@@ -20,4 +21,14 @@
         width: var(--tooltip-size);
         translate: calc(-1 * (var(--tooltip-size) + 1rem)) 0;
     }
+}
+
+.callout[data-callout="epic"] {
+    --callout-color: rgb(0, 0, 0);
+    --callout-icon: none;
+    border: 2px solid var(--color-accent);
+}
+
+.callout[data-callout="epic"] .callout-icon {
+    display: none;
 }
