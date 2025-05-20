@@ -17,6 +17,7 @@ span[src$="bannerimg"] img {
     top: 0;
     left: 0;
     max-height: calc(var(--bannerimg-height) - 1rem);
+    min-height: calc(var(--bannerimg-height) - 1rem);
     position: absolute;
     margin-bottom: 1rem;
     z-index: 9;
