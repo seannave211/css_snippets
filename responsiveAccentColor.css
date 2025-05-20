@@ -2,6 +2,7 @@ body.theme-dark {
     --accent-h: 0 !important;
     --accent-s: 100% !important;
     --accent-l: 100% !important;
+    --text-on-accent: hsl(0 100% 100%) !important;
 }
 
 body.theme-light {
