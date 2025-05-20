@@ -1,6 +1,6 @@
 .callout[data-callout="author"] {
     --callout-color: rgb(255, 255, 255);
-    --callout-icon: user;
+    --callout-icon: lucide-user;
     display: flex;
     flex-direction: column-reverse;
 }
