@@ -1,0 +1,11 @@
+body.theme-dark {
+    --accent-h: 0 !important;
+    --accent-s: 100% !important;
+    --accent-l: 100% !important;
+}
+
+body.theme-light {
+    --accent-h: 0 !important;
+    --accent-s: 0% !important;
+    --accent-l: 0% !important;
+}
