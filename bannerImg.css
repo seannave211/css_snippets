@@ -1,13 +1,27 @@
-span[src$="bannerImg"] img {
-  top: 0;
-  left: 0;
-  z-index: 9;
-  width: 100%;
-  max-width: 100%;
-  margin-top: 0px;
-  max-height: 10rem;
-  min-height: 10rem;
-  object-fit: cover;
-  border-radius: 0px;
-  position: absolute;
+/*
+ * Version: v0.1.0
+ * Purpose: Create a banner image for obsidian
+ * Author: seannave211
+ * Acknowledgement: KuiyueRO
+ */
+
+:root {
+    --bannerimg-height: 16rem;
+}
+
+span[src$="bannerimg"] img {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0px;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    max-height: calc(var(--bannerimg-height) - 1rem);
+    position: absolute;
+    margin-bottom: 1rem;
+    z-index: 9;
+}
+
+.markdown-reading-view .bannerimg {
+    padding-top: var(--bannerimg-height);
 }
