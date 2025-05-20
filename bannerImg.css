@@ -9,7 +9,7 @@
     --bannerimg-height: 16rem;
 }
 
-span[src$="bannerimg"] img {
+.bannerimg span[src$="bannerimg"] img {
     width: 100%;
     max-width: 100%;
     margin-top: 0px;
