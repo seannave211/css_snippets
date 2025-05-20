@@ -1,0 +1,8 @@
+/*
+ * Purpose: Create a method for removing callout icons
+ * Author: rushi
+ */
+
+.callout:is([data-callout-metadata="noicon"]) .callout-icon {
+    display: none;
+}
