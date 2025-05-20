@@ -1,6 +1,20 @@
 .callout[data-callout="author"] {
-    --callout-color: rgb(255, 255, 255);
+    --callout-color: 255, 255, 255;
     --callout-icon: lucide-user;
     display: flex;
     flex-direction: column-reverse;
+}
+
+.callout[data-callout="author"] .callout-title {
+    align-self: flex-end;
+    padding-right: 1rem;
+}
+
+.callout[data-callout="author"] .callout-content p {
+    margin-top: 0;
+}
+
+.callout[data-callout="author"] .callout-title-inner,
+.callout[data-callout="author"] .callout-icon .svg-icon {
+    color: var(--color-accent);
 }
