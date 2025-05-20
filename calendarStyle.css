@@ -1,0 +1,9 @@
+.today {
+    background-color: var(--color-background-today) !important;
+}
+
+.container.svelte-pcimu8 {
+    --color-text-today: var(--text-on-accent) !important;
+    --color-background-today: var(--color-accent) !important;
+    --color-dot: var(--text-on-accent) !important;
+}
