@@ -25,7 +25,7 @@
 .callout[data-callout="epic"] {
     --callout-color: rgb(0, 0, 0);
     --callout-icon: none;
-    border: 2px solid var(--inline-title-color);
+    border: 2px solid var(--color-accent);
 }
 
 .callout[data-callout="epic"] .callout-icon {
