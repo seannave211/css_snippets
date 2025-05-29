@@ -8,22 +8,22 @@
     --callout-icon: lucide-layout-grid;
 }
 
-.callout[data-callout="grid-tl"] {
+.callout[data-callout="grid"] > .callout[data-callout="grid-tl"] {
     --callout-color: 255, 255, 255;
     --callout-icon: lucide-move-up-left;
 }
 
-.callout[data-callout="grid-tr"] {
+.callout[data-callout="grid"] > .callout[data-callout="grid-tr"] {
     --callout-color: 255, 255, 255;
     --callout-icon: lucide-move-up-right;
 }
 
-.callout[data-callout="grid-bl"] {
+.callout[data-callout="grid"] > .callout[data-callout="grid-bl"] {
     --callout-color: 255, 255, 255;
     --callout-icon: lucide-move-down-left;
 }
 
-.callout[data-callout="grid-br"] {
+.callout[data-callout="grid"] > .callout[data-callout="grid-br"] {
     --callout-color: 255, 255, 255;
     --callout-icon: lucide-move-down-right;
 }
