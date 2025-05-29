@@ -6,6 +6,4 @@
 .callout[data-callout="grid"] {
     --callout-color: 255, 255, 255;
     --callout-icon: lucide-layout-grid;
-    display: flex;
-    flex-direction: column-reverse;
 }
