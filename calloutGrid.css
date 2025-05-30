@@ -1,29 +1,95 @@
 /*
- *Purpose: A CSS snippet for creating a grid within the Obsidian Callouts
- *Author: Sean Nave
+ * Purpose: A CSS snippet for creating a grid layout in Obsidian Callouts
+ * Author: Sean Nave (Optimized & Generalized by ChatGPT)
  */
 
+/* Root grid callout */
 .callout[data-callout="grid"] {
-    --callout-color: 255, 255, 255;
+    --callout-color: 49, 122, 192;
     --callout-icon: lucide-layout-grid;
+    padding: 1rem;
 }
 
-.callout[data-callout="grid"] > .callout[data-callout="grid-tl"] {
-    --callout-color: 255, 255, 255;
+/* Title spacing for the grid container */
+.callout[data-callout="grid"] .callout-title {
+    margin-bottom: 1rem;
+}
+
+/* Grid layout with 2x2 structure */
+.callout[data-callout="grid"] > .callout-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    grid-template-areas:
+        "tl tr"
+        "bl br";
+}
+
+/* Common styling for all grid cell callouts */
+.callout[data-callout="grid"] > .callout-content > .callout {
+    display: block;
+    margin: 0;
+    padding: 1rem;
+    --callout-color: 49, 122, 192;
+}
+
+/* Grid area assignments and icons */
+.callout[data-callout="grid"]
+    > .callout-content
+    > .callout[data-callout="grid-tl"] {
     --callout-icon: lucide-move-up-left;
+    grid-area: tl;
 }
-
-.callout[data-callout="grid"] > .callout[data-callout="grid-tr"] {
-    --callout-color: 255, 255, 255;
+.callout[data-callout="grid"]
+    > .callout-content
+    > .callout[data-callout="grid-tr"] {
     --callout-icon: lucide-move-up-right;
+    grid-area: tr;
 }
-
-.callout[data-callout="grid"] > .callout[data-callout="grid-bl"] {
-    --callout-color: 255, 255, 255;
+.callout[data-callout="grid"]
+    > .callout-content
+    > .callout[data-callout="grid-bl"] {
     --callout-icon: lucide-move-down-left;
+    grid-area: bl;
+}
+.callout[data-callout="grid"]
+    > .callout-content
+    > .callout[data-callout="grid-br"] {
+    --callout-icon: lucide-move-down-right;
+    grid-area: br;
 }
 
-.callout[data-callout="grid"] > .callout[data-callout="grid-br"] {
-    --callout-color: 255, 255, 255;
-    --callout-icon: lucide-move-down-right;
+/* ❗ Show warning on any grid-* callout if used outside a grid callout */
+.callout[data-callout^="grid-"]:not(
+        .callout[data-callout="grid"] .callout[data-callout^="grid-"]
+    )
+    > .callout-title::before {
+    content: "USE INSIDE A GRID CALLOUT";
+    display: inline-block;
+    margin-right: 0.5em;
+    font-weight: bold;
+    color: red;
+}
+
+.callout[data-callout^="grid-"]:not(
+        .callout[data-callout="grid"] .callout[data-callout^="grid-"]
+    )
+    > .callout-content,
+.callout[data-callout^="grid-"]:not(
+        .callout[data-callout="grid"] .callout[data-callout^="grid-"]
+    )
+    > .callout-title
+    > .callout-icon,
+.callout[data-callout^="grid-"]:not(
+        .callout[data-callout="grid"] .callout[data-callout^="grid-"]
+    )
+    > .callout-title
+    > .callout-title-inner,
+.callout[data-callout^="grid-"]:not(
+        .callout[data-callout="grid"] .callout[data-callout^="grid-"]
+    )
+    > .callout-title
+    > .callout-fold {
+    display: none;
 }
