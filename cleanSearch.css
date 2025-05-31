@@ -1,0 +1,8 @@
+.cleansearch .internal-query-header,
+.cleansearch .search-result-file-matches {
+    display: none;
+}
+
+.cleansearch .internal-query {
+    border-top: none;
+}
